@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8" />
+<title>תשליך על החוף</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="ערב תשליך, סדנת העצמה ומסר אישי לשנה החדשה, בהנחיית נועה מרים שפורקר. חוף ארבע על ארבע, ראשון לציון." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;700&family=Assistant:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f5eee0;
+    --surface: #fffdf8;
+    --surface-2: #ece0c8;
+    --ink: #1c2b2c;
+    --ink-soft: #52605f;
+    --sea: #123943;
+    --sea-soft: #3e7c82;
+    --coral: #d9663c;
+    --coral-ink: #ffffff;
+    --gold: #b9862f;
+    --border: rgba(18,57,67,0.16);
+    --shadow: 0 18px 40px -22px rgba(18,57,67,0.35);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0b191c;
+      --surface: #12262a;
+      --surface-2: #17302e;
+      --ink: #eee7d6;
+      --ink-soft: #b7c5c3;
+      --sea: #9fd2d8;
+      --sea-soft: #6fa8ad;
+      --coral: #f0895c;
+      --coral-ink: #16100c;
+      --gold: #e2b968;
+      --border: rgba(238,231,214,0.18);
+      --shadow: 0 18px 40px -20px rgba(0,0,0,0.55);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #0b191c;
+    --surface: #12262a;
+    --surface-2: #17302e;
+    --ink: #eee7d6;
+    --ink-soft: #b7c5c3;
+    --sea: #9fd2d8;
+    --sea-soft: #6fa8ad;
+    --coral: #f0895c;
+    --coral-ink: #16100c;
+    --gold: #e2b968;
+    --border: rgba(238,231,214,0.18);
+    --shadow: 0 18px 40px -20px rgba(0,0,0,0.55);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { direction: rtl; }
+  body {
+    direction: rtl;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Assistant", "Segoe UI", Arial, sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-align: right;
+  }
+  h1, h2, h3, .display { font-family: "Frank Ruhl Libre", "Times New Roman", serif; font-weight: 700; text-wrap: balance; margin: 0; }
+  a { color: inherit; }
+  img, svg { max-width: 100%; display: block; }
+
+  .wrap { max-width: 660px; margin: 0 auto; padding: 0 20px; }
+  .narrow { max-width: 560px; margin: 0 auto; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    min-height: 78vh;
+    display: flex;
+    align-items: flex-end;
+    background: linear-gradient(180deg, #fff1c9 0%, #ffd79a 22%, #ffab73 40%, #f2806f 54%, #dd6b86 66%, #7d6a95 78%, #3d7a94 100%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .hero {
+      background: linear-gradient(180deg, #4a3a4a 0%, #7a4650 24%, #9a5548 42%, #6d4456 58%, #0e2530 100%);
+    }
+  }
+  :root[data-theme="dark"] .hero {
+    background: linear-gradient(180deg, #4a3a4a 0%, #7a4650 24%, #9a5548 42%, #6d4456 58%, #0e2530 100%);
+  }
+  .sun {
+    position: absolute; top: 10%; right: 50%; transform: translate(50%, -50%);
+    width: 140px; height: 140px; border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, #fffaee 0%, #ffe9ad 40%, rgba(255,233,173,0) 70%);
+    box-shadow: 0 0 60px 20px rgba(255, 233, 173, 0.35);
+  }
+  .glimmer {
+    position: absolute; top: 24%; right: 50%; transform: translateX(50%);
+    width: 46px; height: 62%;
+    background: linear-gradient(180deg, rgba(255,245,220,0.55), rgba(255,245,220,0.08) 70%, rgba(255,245,220,0));
+    filter: blur(3px);
+    opacity: 0.8;
+  }
+  .waves { position: absolute; left: -10%; right: -10%; bottom: -2px; width: 120%; height: 150px; animation: drift 22s linear infinite; }
+  @media (prefers-reduced-motion: reduce) { .waves { animation: none; } }
+  @keyframes drift { from { transform: translateX(0); } to { transform: translateX(-16.66%); } }
+
+  .hero-content { position: relative; z-index: 2; width: 100%; padding: 0 20px 52px; color: #fff8ec; text-align: center; }
+  .eyebrow { font-size: 0.82rem; letter-spacing: 0.1em; color: #ffe6c9; margin-bottom: 16px; font-weight: 700; text-shadow: 0 1px 12px rgba(0,0,0,0.35); }
+  .hero h1 { font-size: clamp(2rem, 7.5vw, 3rem); line-height: 1.28; color: #fffaf0; text-shadow: 0 2px 24px rgba(0,0,0,0.25); }
+  .hero p.tagline { margin: 20px auto 0; max-width: 30em; font-size: 1.1rem; color: #fdeee0; }
+  .pills { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin: 26px 0 0; }
+  .pill { background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.35); backdrop-filter: blur(6px); color: #fff8ec; padding: 8px 16px; border-radius: 999px; font-size: 0.92rem; font-weight: 600; }
+
+  /* ---------- Sections ---------- */
+  section { padding: 60px 0; }
+  .kicker { font-size: 0.78rem; letter-spacing: 0.12em; color: var(--sea-soft); font-weight: 700; margin-bottom: 10px; }
+  h2 { font-size: 1.6rem; margin-bottom: 16px; color: var(--sea); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) h2 { color: var(--gold); } }
+  :root[data-theme="dark"] h2 { color: var(--gold); }
+  p { color: var(--ink-soft); margin: 0 0 14px; }
+  .center { text-align: center; }
+
+  /* ---------- Problem ---------- */
+  .problem h2 { font-family: "Frank Ruhl Libre", serif; font-size: 1.9rem; color: var(--ink); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .problem h2 { color: var(--ink); } }
+  :root[data-theme="dark"] .problem h2 { color: var(--ink); }
+  .problem p { font-size: 1.08rem; }
+
+  /* ---------- Benefits ---------- */
+  .benefits { display: grid; gap: 16px; margin-top: 24px; }
+  .benefit-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 22px 20px; box-shadow: var(--shadow); }
+  .benefit-num { font-family: "Frank Ruhl Libre", serif; color: var(--coral); font-size: 0.95rem; font-weight: 700; letter-spacing: 0.06em; margin-bottom: 6px; }
+  .benefit-card h3 { font-size: 1.15rem; color: var(--ink); margin-bottom: 8px; }
+  .benefit-card p { margin: 0; }
+
+  /* ---------- Steps ---------- */
+  .steps { list-style: none; padding: 0; margin: 22px 0 0; display: grid; gap: 12px; }
+  .steps li { display: flex; gap: 14px; align-items: flex-start; background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 15px 18px; box-shadow: var(--shadow); }
+  .steps .num { font-family: "Frank Ruhl Libre", serif; font-weight: 700; color: var(--coral); font-size: 1.15rem; min-width: 1.4em; }
+  .steps strong { color: var(--ink); }
+
+  /* ---------- Video ---------- */
+  .video-frame { max-width: 360px; margin: 26px auto 0; border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); background: #000; }
+  .video-frame video { width: 100%; display: block; }
+
+  /* ---------- Testimonials ---------- */
+  .testimonials { display: grid; gap: 16px; margin-top: 24px; }
+  .testimonial-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 8px; box-shadow: var(--shadow); overflow: hidden; }
+  .testimonial-card img { border-radius: 10px; width: 100%; }
+
+  /* ---------- Quote ---------- */
+  .quote-card {
+    background: var(--sea); color: #fdf6e8; border-radius: 20px; padding: 34px 26px;
+    text-align: center; box-shadow: var(--shadow);
+  }
+  :root[data-theme="dark"] .quote-card { background: var(--surface-2); color: var(--ink); }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .quote-card { background: var(--surface-2); color: var(--ink); } }
+  .quote-card blockquote { font-family: "Frank Ruhl Libre", serif; font-size: 1.25rem; line-height: 1.55; margin: 0 0 14px; }
+  .quote-card cite { font-style: normal; font-size: 0.9rem; opacity: 0.85; font-weight: 600; }
+
+  /* ---------- Details ---------- */
+  .details-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 26px 24px; box-shadow: var(--shadow); }
+  .details-grid { display: grid; gap: 16px; }
+  .detail-row { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1px solid var(--border); }
+  .detail-row:last-child { border-bottom: none; padding-bottom: 0; }
+  .detail-label { color: var(--ink-soft); font-size: 0.92rem; }
+  .detail-value { font-weight: 700; text-align: left; }
+  .detail-value a { color: var(--sea-soft); text-decoration: underline; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .detail-value a { color: var(--gold); } }
+  :root[data-theme="dark"] .detail-value a { color: var(--gold); }
+
+  /* ---------- FAQ ---------- */
+  .faq { display: grid; gap: 10px; margin-top: 22px; }
+  .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 4px 20px; box-shadow: var(--shadow); }
+  .faq-item summary { cursor: pointer; padding: 16px 0; font-weight: 700; color: var(--ink); list-style: none; display: flex; justify-content: space-between; gap: 10px; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: "+"; font-family: "Frank Ruhl Libre", serif; font-size: 1.3rem; color: var(--coral); flex-shrink: 0; }
+  .faq-item[open] summary::after { content: "–"; }
+  .faq-item p { padding-bottom: 16px; margin: 0; }
+
+  footer { padding: 40px 0 60px; text-align: center; color: var(--ink-soft); font-size: 0.9rem; }
+
+  [hidden] { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="hero" dir="rtl" lang="he">
+  <div class="sun"></div>
+  <div class="glimmer"></div>
+  <svg class="waves" viewBox="0 0 1200 200" preserveAspectRatio="none" aria-hidden="true">
+    <path d="M0,90 C150,30 350,150 600,90 C850,30 1050,150 1200,90 L1200,200 L0,200 Z" fill="#4f8aa3" opacity="0.6"></path>
+    <path d="M200,90 C350,30 550,150 800,90 C1050,30 1250,150 1400,90 L1400,200 L200,200 Z" fill="#336b82" opacity="0.9"></path>
+  </svg>
+  <div class="hero-content">
+    <div class="eyebrow">לקראת ראש השנה תשפ״ז · מעגל קטן, עד 20 מקומות</div>
+    <h1>לשחרר את השנה שהייתה.<br>להיכנס נקייה לשנה שמתחילה.</h1>
+    <p class="tagline">ערב אחד על שפת הים: טקס תשליך, סדנת העצמה קצרה, ומסר אישי לשנה החדשה שתיקחי איתך הביתה. בהנחיית נועה מרים שפורקר.</p>
+    <div class="pills">
+      <span class="pill">חוף ארבע על ארבע, ראשון לציון</span>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" dir="rtl" lang="he">
+
+  <section id="problem" class="problem narrow">
+    <div class="kicker center">לפני שממשיכות</div>
+    <h2 class="center">את מכירה את התחושה?</h2>
+    <p>השנה הייתה מה שהייתה - רגעים טובים, ורגעים שהיית רוצה למחוק. ולפעמים הכי קשה זה לא להיפרד מהשנה שחלפה, אלא להרגיש שבאמת אפשר לפתוח דף חדש. בשביל זה בדיוק בניתי את הערב הזה.</p>
+  </section>
+
+  <section id="video" class="narrow center">
+    <div class="kicker">רגע מהחוף</div>
+    <h2>ככה זה נראה בפועל - מהסדנה הראשונה</h2>
+    <div class="video-frame">
+      <video controls preload="metadata" playsinline>
+        <source src="assets/hazmana-ishit.mp4" type="video/mp4">
+      </video>
+    </div>
+  </section>
+
+  <section id="benefits">
+    <div class="kicker">מה מחכה לך</div>
+    <h2>ערב אחד, שלושה שלבים לשנה חדשה</h2>
+    <div class="benefits">
+      <div class="benefit-card">
+        <div class="benefit-num">שחרור</div>
+        <h3>טקס תשליך על קו המים</h3>
+        <p>משחררות יחד, פיזית וסמלית, את מה שכבר לא משרת אתכן - כעס ישן, פחד, הרגל שהתיישן.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">העצמה</div>
+        <h3>סדנה קצרה לשנה החדשה</h3>
+        <p>סדנה ממוקדת שמחברת אותך מחדש לכוחות הפנימיים שלך, לקראת השנה שמתחילה.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-num">מסר אישי</div>
+        <h3>לוקחת איתך הביתה</h3>
+        <p>הערב מסתיים במסר אישי לשנה החדשה שכל אחת מקבלת - תזכורת קטנה לחזור אליה במהלך השנה.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="agenda">
+    <div class="kicker">איך זה בפועל</div>
+    <h2>מהלך הערב</h2>
+    <ol class="steps">
+      <li><span class="num">01</span><div><strong>היכרות פתיחה</strong><br>מתכנסות על החוף, כמה מילים על הכוונה של הערב.</div></li>
+      <li><span class="num">02</span><div><strong>כתיבה אישית</strong><br>רגע שקט לכתוב מה משחררות החוצה, ומה מזמינות פנימה לשנה הקרובה.</div></li>
+      <li><span class="num">03</span><div><strong>טקס תשליך משותף</strong><br>יורדות יחד אל קו המים לרגע השחרור עצמו.</div></li>
+      <li><span class="num">04</span><div><strong>סדנת העצמה קצרה</strong><br>כלים ותובנות פרקטיות לקחת איתך לשנה החדשה.</div></li>
+      <li><span class="num">05</span><div><strong>נעילה ומסר אישי</strong><br>כל אחת יוצאת עם מסר אישי לשנה החדשה, וברכה משותפת.</div></li>
+    </ol>
+  </section>
+
+  <section id="quote" class="narrow">
+    <div class="quote-card">
+      <blockquote>"מוזמנת להצטרף אליי לערב הזה. זה הזמן שלנו לרדת מהריצה של השנה האחרונה, לגעת ברגע אחד באמת, ולהיכנס לשנה החדשה קלות יותר."</blockquote>
+      <cite>נועה מרים שפורקר, מנחת הטקס</cite>
+    </div>
+  </section>
+
+  <section id="testimonials" class="narrow">
+    <div class="kicker center">מה אומרות מי שכבר היו</div>
+    <h2 class="center">המלצות מהסדנה הראשונה</h2>
+    <div class="testimonials">
+      <div class="testimonial-card"><img src="assets/hamlatza-1.jpg" alt="המלצה על סדנת התשליך"></div>
+      <div class="testimonial-card"><img src="assets/hamlatza-2.jpg" alt="המלצה על סדנת התשליך"></div>
+    </div>
+  </section>
+
+  <section id="details">
+    <div class="kicker">פרטים מעשיים</div>
+    <h2>איפה וכיצד</h2>
+    <div class="details-card">
+      <div class="details-grid">
+        <div class="detail-row"><span class="detail-label">מיקום</span><span class="detail-value"><a href="https://www.google.com/maps/search/?api=1&query=%D7%97%D7%95%D7%A3%20%D7%90%D7%A8%D7%91%D7%A2%20%D7%A2%D7%9C%20%D7%90%D7%A8%D7%91%D7%A2%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%9C%D7%A6%D7%99%D7%95%D7%9F" target="_blank" rel="noopener">חוף ארבע על ארבע, ראשון לציון ↗</a></span></div>
+        <div class="detail-row"><span class="detail-label">גודל קבוצה</span><span class="detail-value">עד 20 משתתפות</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="narrow">
+    <div class="kicker">שאלות שכדאי לענות עליהן מראש</div>
+    <h2>שאלות נפוצות</h2>
+    <div class="faq">
+      <details class="faq-item">
+        <summary>אני לא "רוחנית" בכלל - זה בשבילי?</summary>
+        <p>בהחלט. הערב מתאים לכל אחת שמרגישה שהיא רוצה רגע אמיתי לעצמה לפני השנה החדשה, בלי קשר לרקע או לניסיון קודם.</p>
+      </details>
+      <details class="faq-item">
+        <summary>אפשר להגיע לבד?</summary>
+        <p>כן, ובגדול - רוב הנרשמות מגיעות לבד, ויוצאות עם מעגל חדש של היכרויות.</p>
+      </details>
+    </div>
+  </section>
+
+  <footer>
+    מנחה את הטקס: <strong>נועה מרים שפורקר</strong>
+  </footer>
+</main>
+
+</body>
+</html>
