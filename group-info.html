@@ -178,6 +178,14 @@
   @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .detail-value a { color: var(--gold); } }
   :root[data-theme="dark"] .detail-value a { color: var(--gold); }
 
+  /* ---------- Payment ---------- */
+  .pay-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 26px 24px; box-shadow: var(--shadow); }
+  .phone-row { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-top: 14px; background: var(--surface-2); border-radius: 12px; padding: 14px 16px; }
+  .phone-num { font-family: "Frank Ruhl Libre", serif; font-size: 1.3rem; font-weight: 700; font-variant-numeric: tabular-nums; direction: ltr; text-align: right; }
+  .copy-btn { border: 1px solid var(--border); background: transparent; color: var(--ink); padding: 8px 14px; border-radius: 999px; font: inherit; font-size: 0.85rem; cursor: pointer; white-space: nowrap; }
+  .wa-btn { display: block; text-align: center; background: #25D366; color: #073016; font-weight: 700; padding: 15px; border-radius: 12px; text-decoration: none; margin-top: 16px; }
+  .fine { font-size: 0.85rem; color: var(--ink-soft); margin-top: 14px; }
+
   /* ---------- FAQ ---------- */
   .faq { display: grid; gap: 10px; margin-top: 22px; }
   .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 4px 20px; box-shadow: var(--shadow); }
@@ -288,7 +296,7 @@
       </div>
       <div class="details-card with-map">
         <div class="details-grid">
-          <div class="detail-row"><span class="detail-label">תאריך</span><span class="detail-value">יום חמישי, 17.9.2026</span></div>
+          <div class="detail-row"><span class="detail-label">תאריך</span><span class="detail-value">יום שני, 28.9.2026</span></div>
           <div class="detail-row"><span class="detail-label">שעה</span><span class="detail-value">19:00</span></div>
           <div class="detail-row"><span class="detail-label">מיקום</span><span class="detail-value"><a href="https://www.google.com/maps/search/?api=1&query=%D7%97%D7%95%D7%A3%20%D7%90%D7%A8%D7%91%D7%A2%20%D7%A2%D7%9C%20%D7%90%D7%A8%D7%91%D7%A2%20%D7%9E%D7%95%D7%9C%20%D7%94%D7%93%D7%9C%D7%99%20%D7%A7%D7%A8%D7%99%D7%9D%20%D7%A8%D7%90%D7%A9%D7%95%D7%9F%20%D7%9C%D7%A6%D7%99%D7%95%D7%9F" target="_blank" rel="noopener">חוף ארבע על ארבע, מול "הדלי קרים", ראשון לציון ↗</a></span></div>
           <div class="detail-row"><span class="detail-label">חניה</span><span class="detail-value">יש חניות פנויות במרחב החוף</span></div>
@@ -312,10 +320,39 @@
     </div>
   </section>
 
+  <section id="הרשמה" class="narrow">
+    <div class="kicker">הצטרפות</div>
+    <h2>איך נרשמים ומשלמים</h2>
+    <div class="pay-card">
+      <p style="margin:0">שריון מקום ותשלום מתואמים ישירות מול המספר הבא - גם להרשמה בוואטסאפ וגם לתשלום בביט:</p>
+      <div class="phone-row">
+        <span class="phone-num">054-700-1931</span>
+        <button type="button" class="copy-btn" id="copy-phone">העתקת מספר</button>
+      </div>
+      <a href="https://wa.me/972547001931" id="wa-button" class="wa-btn" target="_blank" rel="noopener">הרשמה ואישור בוואטסאפ ←</a>
+      <p class="fine">לתשלום בביט: פותחים את אפליקציית Bit, בוחרים "שליחת כסף" ומזינים את המספר שלמעלה.</p>
+    </div>
+  </section>
+
   <footer>
     מנחה את הטקס: <strong>נועה מרים שפורקר</strong>
   </footer>
 </main>
+
+<script>
+(function () {
+  var copyBtn = document.getElementById("copy-phone");
+  if (copyBtn) {
+    copyBtn.addEventListener("click", async function () {
+      try {
+        await navigator.clipboard.writeText("0547001931");
+        copyBtn.textContent = "הועתק!";
+        setTimeout(function () { copyBtn.textContent = "העתקת מספר"; }, 1800);
+      } catch (e) {}
+    });
+  }
+})();
+</script>
 
 </body>
 </html>
